@@ -1,0 +1,5 @@
+saida/
+logs-arte/
+__pycache__/
+*.pyc
+saida-exemplo/
