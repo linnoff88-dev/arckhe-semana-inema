@@ -1,4 +1,4 @@
-﻿# semana-inema â€” a semana sem sobrecarga
+ï»¿# semana-inema ê¢â¬â a semana sem sobrecarga
 
 <div align="center">
   <img src="capa/logo.svg" alt="Arckhé AI" height="48" />
@@ -8,36 +8,36 @@
 
 [![semana-inema](guia/assets/banner.jpg)](https://inematds.github.io/semana-inema/guia/)
 
-**ðŸ‡§ðŸ‡· [PortuguÃªs](README.md) Â· ðŸ‡ºðŸ‡¸ [English](README.en.md) Â· ðŸ‡ªðŸ‡¸ [EspaÃ±ol](README.es.md)**
+**ê°Å¸â¡Â§ê°Å¸â¡Â· [PortuguêÂªs](README.md) êÂ· ê°Å¸â¡Âºê°Å¸â¡Â¸ [English](README.en.md) êÂ· ê°Å¸â¡Âªê°Å¸â¡Â¸ [EspaêÂ±ol](README.es.md)**
 
-## O que Ã©
+## O que êÂ©
 
-O semana-inema Ã© um kit gratuito para quem cuida de uma comunidade (grupo de Telegram, WhatsApp, turma, lista de e-mail). Toda semana ele lÃª o que saiu de novo nas suas fontes e monta uma ediÃ§Ã£o curta com sete partes: a Ãºnica coisa a fazer, o caminho para cada caso, as vitÃ³rias dos membros, o que chegou, o que pode ignorar, onde pedir ajuda e quem mais ajudou. Sai em trÃªs formatos: mensagem de Telegram, e-mail e pÃ¡gina. Precisa sÃ³ de Python no computador; nada Ã© publicado sozinho.
+O semana-inema êÂ© um kit gratuito para quem cuida de uma comunidade (grupo de Telegram, WhatsApp, turma, lista de e-mail). Toda semana ele lêÂª o que saiu de novo nas suas fontes e monta uma ediêÂ§êÂ£o curta com sete partes: a êÂºnica coisa a fazer, o caminho para cada caso, as vitêÂ³rias dos membros, o que chegou, o que pode ignorar, onde pedir ajuda e quem mais ajudou. Sai em trêÂªs formatos: mensagem de Telegram, e-mail e pêÂ¡gina. Precisa sêÂ³ de Python no computador; nada êÂ© publicado sozinho.
 
-> Sua comunidade nÃ£o precisa de mais conteÃºdo. Precisa saber o que fazer.
+> Sua comunidade nêÂ£o precisa de mais conteêÂºdo. Precisa saber o que fazer.
 
-## ðŸ“– Guia de uso
+## ê°Å¸ââ Guia de uso
 
-Guia completo (o mÃ©todo + passo a passo): **https://inematds.github.io/semana-inema/guia/**
+Guia completo (o mêÂ©todo + passo a passo): **https://inematds.github.io/semana-inema/guia/**
 
-## O processo, do inÃ­cio ao fim
+## O processo, do inêÂ­cio ao fim
 
-Quem faz: ðŸ§  o moderador (vocÃª) Â· âš™ï¸ o script Â· ðŸ¤– um agente (Claude Code ou Codex), opcional.
+Quem faz: ê°Å¸Â§Â  o moderador (vocêÂª) êÂ· ê¢Å¡â¢ê¯Â¸Â o script êÂ· ê°Å¸Â¤â um agente (Claude Code ou Codex), opcional.
 
 | # | Passo | Comando / arquivo | Quem |
 |---|---|---|---|
-| 1 | Ver o exemplo pronto (lÃª a cÃ³pia da semana do INEMA que vem no kit) | `python3 semana.py gerar --config config.exemplo.json --de 2026-11-01 --ate 2026-11-08` | âš™ï¸ |
-| 2 | Configurar uma vez: nome, link, plantÃ£o (o texto da seÃ§Ã£o "Travou?") e a sua tabela de publicados | `cp config.modelo.json config.json`, depois `config.json` e `publicados.md` | ðŸ§  |
-| 3 | Durante a semana, anotar vitÃ³rias e quem ajudou (com licenÃ§a das pessoas) | `vitorias.md`, `ajudantes.md` | ðŸ§  |
-| 4 | Juntar o que chegou na semana e montar o rascunho | `python3 semana.py rascunho` â†’ `saida/<data>/rascunho.md` | âš™ï¸ |
-| 5 | Escolher a Ãºnica coisa, a tabela "seu caso â†’ seu caminho" e o "pode ignorar" | colar `prompts/escolher-a-unica-coisa.md` â†’ escreve `edicao.md` | ðŸ¤– (ou ðŸ§  Ã  mÃ£o) |
-| 6 | Ler e ajustar a escolha (a linha `semana:` tem que ser o Ãºltimo dia da semana; ediÃ§Ã£o de outra semana Ã© recusada) | `edicao.md` | ðŸ§  |
-| 7 | Gerar os trÃªs formatos | `python3 semana.py gerar` â†’ `telegram.md` (+ `telegram-2.md`â€¦), `email.html`, `pagina.html` | âš™ï¸ |
-| 8 | Conferir e publicar (o kit nÃ£o envia nada) | colar no grupo, no e-mail, no site | ðŸ§  |
+| 1 | Ver o exemplo pronto (lêÂª a cêÂ³pia da semana do INEMA que vem no kit) | `python3 semana.py gerar --config config.exemplo.json --de 2026-11-01 --ate 2026-11-08` | ê¢Å¡â¢ê¯Â¸Â |
+| 2 | Configurar uma vez: nome, link, plantêÂ£o (o texto da seêÂ§êÂ£o "Travou?") e a sua tabela de publicados | `cp config.modelo.json config.json`, depois `config.json` e `publicados.md` | ê°Å¸Â§Â  |
+| 3 | Durante a semana, anotar vitêÂ³rias e quem ajudou (com licenêÂ§a das pessoas) | `vitorias.md`, `ajudantes.md` | ê°Å¸Â§Â  |
+| 4 | Juntar o que chegou na semana e montar o rascunho | `python3 semana.py rascunho` ê¢â â `saida/<data>/rascunho.md` | ê¢Å¡â¢ê¯Â¸Â |
+| 5 | Escolher a êÂºnica coisa, a tabela "seu caso ê¢â â seu caminho" e o "pode ignorar" | colar `prompts/escolher-a-unica-coisa.md` ê¢â â escreve `edicao.md` | ê°Å¸Â¤â (ou ê°Å¸Â§Â  êÂ  mêÂ£o) |
+| 6 | Ler e ajustar a escolha (a linha `semana:` tem que ser o êÂºltimo dia da semana; ediêÂ§êÂ£o de outra semana êÂ© recusada) | `edicao.md` | ê°Å¸Â§Â  |
+| 7 | Gerar os trêÂªs formatos | `python3 semana.py gerar` ê¢â â `telegram.md` (+ `telegram-2.md`ê¢â¬Â¦), `email.html`, `pagina.html` | ê¢Å¡â¢ê¯Â¸Â |
+| 8 | Conferir e publicar (o kit nêÂ£o envia nada) | colar no grupo, no e-mail, no site | ê°Å¸Â§Â  |
 
-Para uma semana que nÃ£o termina hoje, passe as datas nos passos 4 e 7: `--ate AAAA-MM-DD` (Ãºltimo dia) e, se quiser, `--de AAAA-MM-DD`. Sem `--de`, a janela Ã© de 7 dias terminando no `--ate`.
+Para uma semana que nêÂ£o termina hoje, passe as datas nos passos 4 e 7: `--ate AAAA-MM-DD` (êÂºltimo dia) e, se quiser, `--de AAAA-MM-DD`. Sem `--de`, a janela êÂ© de 7 dias terminando no `--ate`.
 
-## ComeÃ§ar
+## ComeêÂ§ar
 
 ```bash
 git clone https://github.com/inematds/semana-inema.git
@@ -46,56 +46,56 @@ python3 -m unittest discover -s tests
 python3 semana.py gerar --config config.exemplo.json --de 2026-11-01 --ate 2026-11-08
 ```
 
-Depois, para a sua comunidade: crie o `publicados.md`, copie o modelo genÃ©rico por cima do config (`cp config.modelo.json config.json`; no Windows, `copy`), troque nele o nome, o link e o plantÃ£o, apague os exemplos de `vitorias.md`/`ajudantes.md` e rode:
+Depois, para a sua comunidade: crie o `publicados.md`, copie o modelo genêÂ©rico por cima do config (`cp config.modelo.json config.json`; no Windows, `copy`), troque nele o nome, o link e o plantêÂ£o, apague os exemplos de `vitorias.md`/`ajudantes.md` e rode:
 
 ```bash
 python3 semana.py rascunho
 python3 semana.py gerar
 ```
 
-Formato do `publicados.md` (uma linha por publicaÃ§Ã£o; sem "publicado" fica de fora):
+Formato do `publicados.md` (uma linha por publicaêÂ§êÂ£o; sem "publicado" fica de fora):
 
 ```markdown
 | Tema | Data | Estado |
 |---|---|---|
-| Aula: o primeiro agente | 05/11/2026 | publicado 05/11/2026 â€” https://exemplo.com/aula |
-| Guia do backup | 06/11/2026 | em produÃ§Ã£o |
+| Aula: o primeiro agente | 05/11/2026 | publicado 05/11/2026 ê¢â¬â https://exemplo.com/aula |
+| Guia do backup | 06/11/2026 | em produêÂ§êÂ£o |
 ```
 
-SÃ³ biblioteca padrÃ£o do Python 3 (nada de `pip install`). No Windows, troque `python3` por `py`.
+SêÂ³ biblioteca padrêÂ£o do Python 3 (nada de `pip install`). No Windows, troque `python3` por `py`.
 
-## As sete seÃ§Ãµes
+## As sete seêÂ§êÂµes
 
-1. **A Ãºnica coisa desta semana** â€” uma tarefa que termina com 1 resultado funcionando (nÃ£o "assisti o vÃ­deo").
-2. **Seu caso â†’ seu caminho** â€” tabela "usa X â†’ veja Y".
-3. **VitÃ³rias da comunidade** â€” de `vitorias.md`: `- Nome â€” o que fez â€” link`.
-4. **O que chegou** â€” lido das fontes, sÃ³ o que caiu na janela da semana.
-5. **Pode ignorar** â€” 2 a 4 novidades que podem esperar, com o motivo.
-6. **Travou?** â€” onde e como pedir ajuda (texto do plantÃ£o no `config.json`).
-7. **Quem mais ajudou** â€” ranking manual de `ajudantes.md` (opcional; vazio aparece como vazio).
+1. **A êÂºnica coisa desta semana** ê¢â¬â uma tarefa que termina com 1 resultado funcionando (nêÂ£o "assisti o vêÂ­deo").
+2. **Seu caso ê¢â â seu caminho** ê¢â¬â tabela "usa X ê¢â â veja Y".
+3. **VitêÂ³rias da comunidade** ê¢â¬â de `vitorias.md`: `- Nome ê¢â¬â o que fez ê¢â¬â link`.
+4. **O que chegou** ê¢â¬â lido das fontes, sêÂ³ o que caiu na janela da semana.
+5. **Pode ignorar** ê¢â¬â 2 a 4 novidades que podem esperar, com o motivo.
+6. **Travou?** ê¢â¬â onde e como pedir ajuda (texto do plantêÂ£o no `config.json`).
+7. **Quem mais ajudou** ê¢â¬â ranking manual de `ajudantes.md` (opcional; vazio aparece como vazio).
 
-## Fontes de "O que chegou" (`config.json` â€º `fontes`)
+## Fontes de "O que chegou" (`config.json` ê¢â¬Âº `fontes`)
 
-| tipo | O que lÃª | Campos |
+| tipo | O que lêÂª | Campos |
 |---|---|---|
-| `tabela_md` | Tabela Markdown de publicaÃ§Ãµes. Entra a linha cujo estado comeÃ§a com a palavra de `so_com` (no INEMA, "publicad", que vale para publicado e publicada; em inglÃªs, "published"); a data Ã© a escrita depois dessa palavra (dd/mm ou dd/mm/aaaa) ou, se faltar, a da coluna de data. Linhas sem data ficam de fora e sÃ£o contadas. | `caminho`, `coluna_titulo`, `coluna_data`, `coluna_estado`, `so_com`, `padrao_id_youtube` (opcional) |
-| `git_log` | Commits dos repositÃ³rios listados, na janela da semana (sem merges). | `repos`, `ignorar_prefixos`, `link_repo` |
-| `feed` | Arquivo salvo no disco: JSON (`titulo`/`data`/`link`) ou RSS/Atom. URL nÃ£o Ã© lida (o kit nÃ£o usa rede). | `caminho` |
+| `tabela_md` | Tabela Markdown de publicaêÂ§êÂµes. Entra a linha cujo estado comeêÂ§a com a palavra de `so_com` (no INEMA, "publicad", que vale para publicado e publicada; em inglêÂªs, "published"); a data êÂ© a escrita depois dessa palavra (dd/mm ou dd/mm/aaaa) ou, se faltar, a da coluna de data. Linhas sem data ficam de fora e sêÂ£o contadas. | `caminho`, `coluna_titulo`, `coluna_data`, `coluna_estado`, `so_com`, `padrao_id_youtube` (opcional) |
+| `git_log` | Commits dos repositêÂ³rios listados, na janela da semana (sem merges). | `repos`, `ignorar_prefixos`, `link_repo` |
+| `feed` | Arquivo salvo no disco: JSON (`titulo`/`data`/`link`) ou RSS/Atom. URL nêÂ£o êÂ© lida (o kit nêÂ£o usa rede). | `caminho` |
 
 Cada fonte liga e desliga com `"ativo": true/false`.
 
 ## Telegram: limite de 4.096
 
-O texto do Telegram Ã© contado como o Telegram conta (unidades UTF-16: emoji vale 2). Se passar de 4.096, o kit divide em `telegram.md`, `telegram-2.md`â€¦ cortando de preferÃªncia no inÃ­cio de uma seÃ§Ã£o. O teste `tests/test_semana.py` confere que nenhuma parte passa do limite e que nada se perde.
+O texto do Telegram êÂ© contado como o Telegram conta (unidades UTF-16: emoji vale 2). Se passar de 4.096, o kit divide em `telegram.md`, `telegram-2.md`ê¢â¬Â¦ cortando de preferêÂªncia no inêÂ­cio de uma seêÂ§êÂ£o. O teste `tests/test_semana.py` confere que nenhuma parte passa do limite e que nada se perde.
 
 ## Exemplo real: a semana do INEMA (01 a 08/11/2026)
 
-Em [`exemplos/2026-11-08/`](exemplos/2026-11-08/): `publicados.md` (cÃ³pia limpa da semana), `rascunho.md`, `telegram.md`, `email.html`, `pagina.html` e prints em 1440 px e 390 px. O kit vem configurado para o INEMA (lÃª a tabela de produÃ§Ãµes de vÃ­deo do INEMA); troque o `config.json` para a sua comunidade.
+Em [`exemplos/2026-11-08/`](exemplos/2026-11-08/): `publicados.md` (cêÂ³pia limpa da semana), `rascunho.md`, `telegram.md`, `email.html`, `pagina.html` e prints em 1440 px e 390 px. O kit vem configurado para o INEMA (lêÂª a tabela de produêÂ§êÂµes de vêÂ­deo do INEMA); troque o `config.json` para a sua comunidade.
 
 - Tabela lida (08/11/2026): 90 linhas, 50 publicadas com data, **26 na semana**.
-- A Ãºnica coisa: *Responda as 6 perguntas da Escada do NegÃ³cio com IA e escolha UM negÃ³cio para comeÃ§ar.*
+- A êÂºnica coisa: *Responda as 6 perguntas da Escada do NegêÂ³cio com IA e escolha UM negêÂ³cio para comeêÂ§ar.*
 - Telegram: 3.671 caracteres, 1 mensagem.
-- VitÃ³rias do exemplo: entregas do prÃ³prio INEMA, marcadas "(exemplo)". Ajudantes: vazio (o kit nÃ£o inventa nomes).
+- VitêÂ³rias do exemplo: entregas do prêÂ³prio INEMA, marcadas "(exemplo)". Ajudantes: vazio (o kit nêÂ£o inventa nomes).
 
 Comandos usados:
 
@@ -106,20 +106,20 @@ python3 semana.py gerar    --de 2026-11-01 --ate 2026-11-08 --saida exemplos
 
 ## Arquivos
 
-| Arquivo | Para quÃª |
+| Arquivo | Para quêÂª |
 |---|---|
 | `semana.py` | o script (rascunho e gerar) |
-| `config.json` | comunidade, link, plantÃ£o, fontes (vem com o INEMA, que lÃª a tabela interna de produÃ§Ãµes) |
-| `config.exemplo.json` | roda o exemplo em qualquer clone (lÃª `exemplos/2026-11-08/publicados.md`) |
-| `config.modelo.json` | modelo genÃ©rico para a sua comunidade (lÃª `publicados.md`); copie por cima do `config.json` |
+| `config.json` | comunidade, link, plantêÂ£o, fontes (vem com o INEMA, que lêÂª a tabela interna de produêÂ§êÂµes) |
+| `config.exemplo.json` | roda o exemplo em qualquer clone (lêÂª `exemplos/2026-11-08/publicados.md`) |
+| `config.modelo.json` | modelo genêÂ©rico para a sua comunidade (lêÂª `publicados.md`); copie por cima do `config.json` |
 | `vitorias.md`, `ajudantes.md` | o que o moderador anota na semana |
-| `edicao.md` | a escolha da semana (Ãºnica coisa, seu caso, pode ignorar); a que vem no kit Ã© o exemplo do INEMA |
+| `edicao.md` | a escolha da semana (êÂºnica coisa, seu caso, pode ignorar); a que vem no kit êÂ© o exemplo do INEMA |
 | `prompts/escolher-a-unica-coisa.md` | pedido pronto para o Claude Code ou o Codex |
 | `tests/` | testes sem rede (`python3 -m unittest discover -s tests`) |
-| `exemplos/` | a ediÃ§Ã£o real do INEMA |
-| `guia/` | pÃ¡gina de apresentaÃ§Ã£o e guia (PT/EN/ES) |
+| `exemplos/` | a ediêÂ§êÂ£o real do INEMA |
+| `guia/` | pêÂ¡gina de apresentaêÂ§êÂ£o e guia (PT/EN/ES) |
 
-## LicenÃ§a
+## LicenêÂ§a
 
 MIT. Feito pelo [INEMA.CLUB](https://inema.club).
 

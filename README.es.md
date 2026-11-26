@@ -53,7 +53,7 @@ Formato de `publicados.md` (una línea por publicación; se excluyen las que no 
 | Tema | Data | Estado |
 |---|---|---|
 | Aula: o primeiro agente | 05/11/2026 | publicado 05/11/2026 — https://exemplo.com/aula |
-| Guia do backup | 06/11/2026 | em produção |
+| Guia do backup | 06/11/2026 | em produçêo |
 ```
 
 Solo usa la biblioteca estándar de Python 3 (no hace falta `pip install`). En Windows, cambia `python3` por `py`.

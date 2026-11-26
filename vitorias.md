@@ -7,9 +7,9 @@ Uma linha por vitória, no formato:
 - Nome — o que fez (resultado concreto, uma frase) — link (opcional)
 
 Peça licença antes de citar o nome. Vale "rodou o primeiro agente", "publicou o site",
-"fez o backup"; não vale "assistiu o vídeo". Toda semana, apague as linhas da semana anterior.
+"fez o backup"; nêo vale "assistiu o vídeo". Toda semana, apague as linhas da semana anterior.
 
-As linhas abaixo são o EXEMPLO do INEMA (semana de 01 a 08/11/2026): como ainda não havia
+As linhas abaixo sêo o EXEMPLO do INEMA (semana de 01 a 08/11/2026): como ainda nêo havia
 vitórias de membros anotadas, entraram só entregas reais publicadas pelo próprio INEMA,
 marcadas como exemplo. Troque pelas vitórias dos seus membros.
 -->

@@ -2,13 +2,13 @@
 """semana.py — a semana sem sobrecarga: o post semanal da sua comunidade.
 
 Lê as fontes da semana (tabela markdown de produções, git log de repos, feed local),
-as vitórias e os ajudantes, e monta a edição em 3 saídas:
+as vitórias e os ajudantes, e monta a ediçêo em 3 saídas:
   saida/<aaaa-mm-dd>/telegram.md   (cabe numa mensagem; se passar de 4.096, vira telegram-2.md, -3…)
   saida/<aaaa-mm-dd>/email.html    (e-mail simples)
   saida/<aaaa-mm-dd>/pagina.html   (página bonita, celular sem rolagem lateral)
 
-Não publica nada: só gera arquivos. Quem cola/publica é o moderador.
-Só biblioteca padrão. Sem rede.
+Nêo publica nada: só gera arquivos. Quem cola/publica é o moderador.
+Só biblioteca padrêo. Sem rede.
 
 Uso:
   python3 semana.py rascunho [--ate AAAA-MM-DD] [--de AAAA-MM-DD] [--dias 7]
@@ -82,7 +82,7 @@ def data_br(d):
 # ---------------------------------------------------------------- janela
 
 def janela(ate, dias=7, de=None):
-    """Janela fechada [de, ate]. Padrão: os 7 dias que terminam em `ate` (ate-6 … ate)."""
+    """Janela fechada [de, ate]. Padrêo: os 7 dias que terminam em `ate` (ate-6 … ate)."""
     if de is None:
         de = ate - dt.timedelta(days=dias - 1)
     if de > ate:
@@ -101,7 +101,7 @@ DATA_COMPLETA = re.compile(r"(\d{1,2})/(\d{1,2})/(\d{4})")
 
 def titulo_curto(tema, curto=25, maximo=90):
     """Título para o post: a parte antes do 1º ' — ' ou ' ('. Se essa parte for curta (só um nome,
-    como 'MovieFlow'), junta o começo da explicação: 'MovieFlow — filme de IA de graça'.
+    como 'MovieFlow'), junta o começo da explicaçêo: 'MovieFlow — filme de IA de graça'.
     Devolve (titulo, detalhe)."""
     m = re.search(r" — | \(", tema)
     if not m:
@@ -130,10 +130,10 @@ def ler_tabela_md(texto, fonte):
     """Lê uma tabela markdown de produções. Devolve (itens, contagem).
 
     Regras:
-    - só vale a tabela que tem a coluna `coluna_titulo` no cabeçalho; linhas acima dele são ignoradas;
+    - só vale a tabela que tem a coluna `coluna_titulo` no cabeçalho; linhas acima dele sêo ignoradas;
     - só entra linha cuja 1ª parte do estado (antes de " — ", ":" ou ";") tem a palavra de `so_com`
       (INEMA: "publicad", que casa publicado/publicada; em inglês, use "published");
-    - data = a data escrita depois dessa palavra (dd/mm ou dd/mm/aaaa); se não houver, a data da coluna_data;
+    - data = a data escrita depois dessa palavra (dd/mm ou dd/mm/aaaa); se nêo houver, a data da coluna_data;
       ano que falta vem da coluna_data; sem data nenhuma → contada como "sem data" e fica de fora.
     """
     def nomes(campo, padrao):
@@ -221,7 +221,7 @@ def ler_git_log(fonte, jan, base):
     for repo in fonte.get("repos", []):
         rp = caminho(base, repo)
         if not (rp / ".git").exists():
-            print(f"  aviso: {rp} não é repositório git — pulei", file=sys.stderr)
+            print(f"  aviso: {rp} nêo é repositório git — pulei", file=sys.stderr)
             continue
         cmd = ["git", "-C", str(rp), "log", "--no-merges", "--date=short",
                f"--since={jan[0].isoformat()} 00:00:00", f"--until={jan[1].isoformat()} 23:59:59",
@@ -268,12 +268,12 @@ def _data_qualquer(s):
 def ler_feed(fonte, jan, base):
     p = str(fonte.get("caminho", ""))
     if p.startswith("http"):
-        print("  aviso: feed por URL não é lido (o kit não usa rede). Salve o arquivo e aponte o caminho.",
+        print("  aviso: feed por URL nêo é lido (o kit nêo usa rede). Salve o arquivo e aponte o caminho.",
               file=sys.stderr)
         return []
     arq = caminho(base, p)
     if not arq.exists():
-        print(f"  aviso: feed {arq} não existe — pulei", file=sys.stderr)
+        print(f"  aviso: feed {arq} nêo existe — pulei", file=sys.stderr)
         return []
     brutos = []
     if arq.suffix.lower() == ".json":
@@ -316,7 +316,7 @@ def coletar(cfg, base, jan):
         if tipo == "tabela_md":
             arq = caminho(base, f["caminho"])
             if not arq.exists():
-                print(f"  aviso: tabela {arq} não existe — pulei", file=sys.stderr)
+                print(f"  aviso: tabela {arq} nêo existe — pulei", file=sys.stderr)
                 resumo.append((f.get("nome", "tabela"), {"ARQUIVO_NAO_ENCONTRADO": str(arq)}))
                 continue
             itens, cont = ler_tabela_md(arq.read_text(encoding="utf-8"), f)
@@ -338,7 +338,7 @@ def coletar(cfg, base, jan):
     return todos, resumo
 
 
-# ---------------------------------------------------------------- vitórias, ajudantes, edição
+# ---------------------------------------------------------------- vitórias, ajudantes, ediçêo
 
 def _linhas_lista(texto):
     texto = re.sub(r"<!--.*?-->", "", texto, flags=re.S)
@@ -362,7 +362,7 @@ def ler_vitorias(texto):
 
 
 def ler_ajudantes(texto):
-    """`- Nome — 12 respostas — observação`. Ordena pelo 1º número, do maior para o menor."""
+    """`- Nome — 12 respostas — observaçêo`. Ordena pelo 1º número, do maior para o menor."""
     out = []
     for ln in _linhas_lista(texto):
         partes = [p.strip() for p in ln.split(" — ")]
@@ -437,7 +437,7 @@ CABECALHO_SECAO = re.compile(r"^\d\) ")
 
 def dividir(texto, limite=LIMITE_TELEGRAM):
     """Divide o texto em partes de até `limite` unidades UTF-16.
-    Corta de preferência no início de uma seção ("3) …"), depois em fim de linha, e só em último caso
+    Corta de preferência no início de uma seçêo ("3) …"), depois em fim de linha, e só em último caso
     no meio da linha. ''.join(partes) == texto."""
     if u16(texto) <= limite:
         return [texto]
@@ -499,13 +499,13 @@ def texto_telegram(ed, cfg, jan, chegou, vitorias, ajudantes):
     for c in ed["caso"]:
         L.append(f"• {c['usa']} → {c['veja']}" + (f" {c['link']}" if c["link"] and c["link"] not in c["veja"] else ""))
     if not ed["caso"]:
-        L.append("• (sem tabela nesta edição)")
+        L.append("• (sem tabela nesta ediçêo)")
     L.append("")
     L.append("3) VITÓRIAS DA COMUNIDADE")
     for v in vitorias:
         L.append(f"• {v['nome']} — {v['feito']}" + (f" {v['link']}" if v["link"] else ""))
     if not vitorias:
-        L.append(f"• Ainda sem vitórias nesta edição. Fez algo funcionar? Conte no grupo: {cfg.get('link', '')}")
+        L.append(f"• Ainda sem vitórias nesta ediçêo. Fez algo funcionar? Conte no grupo: {cfg.get('link', '')}")
     L.append("")
     mx = int(cfg.get("max_o_que_chegou_telegram", 12))
     L.append(f"4) O QUE CHEGOU ({len(chegou)} na semana)")
@@ -615,11 +615,11 @@ def html_pagina(ed, cfg, jan, chegou, vitorias, ajudantes):
     linhas = "".join(f"<tr><td>{e(c['usa'])}</td><td>{a(c['link'], c['veja']) if c['link'] else e(c['veja'])}</td></tr>"
                      for c in ed["caso"])
     S.append(f"""<section id="caso"><h2><span class="n">2</span>Seu caso → seu caminho</h2>
-{'<table><thead><tr><th>Seu caso</th><th>Veja</th></tr></thead><tbody>' + linhas + '</tbody></table>' if linhas else '<p class="vazio">Sem tabela nesta edição.</p>'}</section>""")
+{'<table><thead><tr><th>Seu caso</th><th>Veja</th></tr></thead><tbody>' + linhas + '</tbody></table>' if linhas else '<p class="vazio">Sem tabela nesta ediçêo.</p>'}</section>""")
     vit = "".join(f"<li><strong>{e(v['nome'])}</strong> — {e(v['feito'])}" + (f" · {a(v['link'], 'ver')}" if v["link"] else "") + "</li>"
                   for v in vitorias)
     S.append(f"""<section id="vitorias"><h2><span class="n">3</span>Vitórias da comunidade</h2>
-{'<ul>' + vit + '</ul>' if vit else '<p class="vazio">Ainda sem vitórias nesta edição. Fez algo funcionar? Conte no grupo.</p>'}</section>""")
+{'<ul>' + vit + '</ul>' if vit else '<p class="vazio">Ainda sem vitórias nesta ediçêo. Fez algo funcionar? Conte no grupo.</p>'}</section>""")
     ch = "".join(f"<li><span class=\"data\">{data_br(it['data'])}</span>{a(it['link'], it['titulo']) if it['link'] else e(it['titulo'])}"
                  + (f"<br><span class=\"det\">{e(corta(it['detalhe'], 160))}</span>" if it["detalhe"] and cfg.get("mostrar_detalhe") else "") + "</li>"
                  for it in chegou)
@@ -680,10 +680,10 @@ def html_email(ed, cfg, jan, chegou, vitorias, ajudantes):
     corpo.append('<div style="border:2px solid #EAB308;background:#FEF9C3;border-radius:14px;padding:16px">' + "".join(bloco) + "</div>")
     corpo.append(h2(2, "Seu caso → seu caminho"))
     corpo.append(lista([f"<b>{e(c['usa'])}</b> → {link(c['link'], c['veja']) if c['link'] else e(c['veja'])}" for c in ed["caso"]])
-                 if ed["caso"] else "<p>Sem tabela nesta edição.</p>")
+                 if ed["caso"] else "<p>Sem tabela nesta ediçêo.</p>")
     corpo.append(h2(3, "Vitórias da comunidade"))
     corpo.append(lista([f"<b>{e(v['nome'])}</b> — {e(v['feito'])}" + (f" · {link(v['link'], 'ver')}" if v["link"] else "") for v in vitorias])
-                 if vitorias else "<p>Ainda sem vitórias nesta edição. Fez algo funcionar? Responda este e-mail.</p>")
+                 if vitorias else "<p>Ainda sem vitórias nesta ediçêo. Fez algo funcionar? Responda este e-mail.</p>")
     corpo.append(h2(4, f"O que chegou ({len(chegou)} na semana)"))
     itens = [f"{data_br(it['data'])} · {link(it['link'], it['titulo']) if it['link'] else e(it['titulo'])}" for it in chegou[:mx]]
     if len(chegou) > mx:
@@ -738,7 +738,7 @@ def texto_rascunho(cfg, jan, chegou, resumo, vitorias, ajudantes):
 
 
 MODELO_EDICAO = """
-# Edição da semana
+# Ediçêo da semana
 
 ## Abertura
 (1 frase curta, opcional)
@@ -747,7 +747,7 @@ MODELO_EDICAO = """
 semana: (o último dia da semana, AAAA-MM-DD — o mesmo --ate do rascunho)
 título: (a tarefa, com verbo: "Faça…", "Monte…", "Rode…")
 por que: (1 frase: o que muda na vida de quem fizer)
-resultado: (o que a pessoa tem FUNCIONANDO no fim — não "assistiu o vídeo")
+resultado: (o que a pessoa tem FUNCIONANDO no fim — nêo "assistiu o vídeo")
 tempo: (ex.: 40 minutos)
 link: (o guia ou o vídeo que leva até lá)
 
@@ -760,7 +760,7 @@ link: (o guia ou o vídeo que leva até lá)
 - (novidade) — (por que dá para deixar para depois)
 
 ## Travou?
-(opcional: se vazio, usa o texto do plantão do config.json)
+(opcional: se vazio, usa o texto do plantêo do config.json)
 """
 
 
@@ -789,10 +789,10 @@ def carregar(args):
 def avisa_fontes(resumo):
     faltam = [c["ARQUIVO_NAO_ENCONTRADO"] for _, c in resumo if "ARQUIVO_NAO_ENCONTRADO" in c]
     if faltam:
-        print("\nATENÇÃO: fonte não encontrada, \"O que chegou\" saiu sem ela: " + ", ".join(faltam))
+        print("\nATENÇêO: fonte nêo encontrada, \"O que chegou\" saiu sem ela: " + ", ".join(faltam))
         print("Confira o 'caminho' em config.json (para testar o exemplo: --config config.exemplo.json).")
     elif not resumo:
-        print("\nATENÇÃO: nenhuma fonte ativa em config.json; \"O que chegou\" saiu vazio.")
+        print("\nATENÇêO: nenhuma fonte ativa em config.json; \"O que chegou\" saiu vazio.")
 
 
 def cmd_rascunho(args):
@@ -813,17 +813,17 @@ def cmd_gerar(args):
     cfg, base, jan, chegou, resumo, vitorias, ajudantes, pasta = carregar(args)
     ep = caminho(base, args.edicao or cfg.get("edicao", "edicao.md"))
     if not ep.exists():
-        print(f"Falta o {ep}. Rode `semana.py rascunho` e preencha a edição (ou use o prompt).", file=sys.stderr)
+        print(f"Falta o {ep}. Rode `semana.py rascunho` e preencha a ediçêo (ou use o prompt).", file=sys.stderr)
         return 2
     ed = ler_edicao(ep.read_text(encoding="utf-8"))
     sem = ed["unica"].get("semana", "")
     if sem != jan[1].isoformat() and not args.forcar:
         print(f"O {ep.name} é da semana '{sem or '(sem data)'}', e você está gerando a semana que termina em "
-              f"{jan[1].isoformat()}.\nPreencha a edição desta semana (linha 'semana: {jan[1].isoformat()}' em "
+              f"{jan[1].isoformat()}.\nPreencha a ediçêo desta semana (linha 'semana: {jan[1].isoformat()}' em "
               "'## A única coisa') ou use --forcar.", file=sys.stderr)
         return 2
     if not ed["unica"]["titulo"]:
-        print(f"O {ep} não tem 'título:' em '## A única coisa'. Sem a única coisa não há edição.", file=sys.stderr)
+        print(f"O {ep} nêo tem 'título:' em '## A única coisa'. Sem a única coisa nêo há ediçêo.", file=sys.stderr)
         return 2
     pasta.mkdir(parents=True, exist_ok=True)
     limite = int(cfg.get("limite_telegram", LIMITE_TELEGRAM))
@@ -855,9 +855,9 @@ def main(argv=None):
     for nome in ("rascunho", "gerar"):
         p = sub.add_parser(nome)
         p.add_argument("--config", default=str(Path(__file__).with_name("config.json")))
-        p.add_argument("--ate", help="último dia da semana (AAAA-MM-DD); padrão: hoje")
-        p.add_argument("--de", help="primeiro dia (AAAA-MM-DD); padrão: ate − (dias − 1)")
-        p.add_argument("--dias", type=int, help="tamanho da janela; padrão: janela_dias do config (7)")
+        p.add_argument("--ate", help="último dia da semana (AAAA-MM-DD); padrêo: hoje")
+        p.add_argument("--de", help="primeiro dia (AAAA-MM-DD); padrêo: ate − (dias − 1)")
+        p.add_argument("--dias", type=int, help="tamanho da janela; padrêo: janela_dias do config (7)")
         p.add_argument("--saida")
         p.add_argument("--vitorias")
         p.add_argument("--ajudantes")

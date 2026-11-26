@@ -53,7 +53,7 @@ python3 semana.py gerar
 | Tema | Data | Estado |
 |---|---|---|
 | Aula: o primeiro agente | 05/11/2026 | publicado 05/11/2026 — https://exemplo.com/aula |
-| Guia do backup | 06/11/2026 | em produção |
+| Guia do backup | 06/11/2026 | em produçêo |
 ```
 
 Python 3 standard library only (no `pip install`). On Windows, replace `python3` with `py`.

@@ -66,7 +66,7 @@ class TestTabela(unittest.TestCase):
 
     def test_data_de_publicado_vence_a_data_do_dono(self):
         self.assertEqual(self.por["Bolha da IA — o tombo de 5–6/11/2026"]["data"], D(2026, 11, 7))  # dono 06/11
-        self.assertEqual(self.por["Prospecção B2B por sinais"]["data"], D(2026, 11, 4))  # dono 01/11
+        self.assertEqual(self.por["Prospecçêo B2B por sinais"]["data"], D(2026, 11, 4))  # dono 01/11
 
     def test_publicado_sem_data_usa_o_dono(self):
         self.assertEqual(self.por["Lance sua Startup — 50+ sites"]["data"], D(2026, 11, 7))
@@ -84,7 +84,7 @@ class TestTabela(unittest.TestCase):
     def test_links(self):
         self.assertEqual(self.por["MovieFlow — filme de IA de graça"]["link"], "https://www.youtube.com/watch?v=0zyz-H-1qXQ")
         self.assertEqual(self.por["claude-diretor — mascote INEMA animado"]["link"], "https://www.youtube.com/watch?v=dc1A1sZbREc")
-        # "explicativo" tem 11 letras mas não é id do YouTube
+        # "explicativo" tem 11 letras mas nêo é id do YouTube
         vc = next(x for t, x in self.por.items() if t.startswith("video-codigo"))
         self.assertEqual(vc["link"], "")
 
@@ -92,7 +92,7 @@ class TestTabela(unittest.TestCase):
 class TestTelegram(unittest.TestCase):
     def test_u16_conta_emoji_como_2(self):
         self.assertEqual(semana.u16("abc"), 3)
-        self.assertEqual(semana.u16("ção"), 3)
+        self.assertEqual(semana.u16("çêo"), 3)
         self.assertEqual(semana.u16("🚀"), 2)
 
     def test_texto_curto_nao_divide(self):
@@ -101,8 +101,8 @@ class TestTelegram(unittest.TestCase):
     def test_divide_em_ate_4096_sem_perder_nada(self):
         secoes = []
         for n in range(1, 8):
-            corpo = "".join(f"• item {n}.{k} — 🚀 ação concreta com acentuação https://exemplo.org/{k}\n" for k in range(40))
-            secoes.append(f"{n}) SEÇÃO {n}\n{corpo}\n")
+            corpo = "".join(f"• item {n}.{k} — 🚀 açêo concreta com acentuaçêo https://exemplo.org/{k}\n" for k in range(40))
+            secoes.append(f"{n}) SEÇêO {n}\n{corpo}\n")
         texto = "".join(secoes)
         self.assertGreater(semana.u16(texto), 4096 * 2)
         partes = semana.dividir(texto, 4096)
@@ -110,11 +110,11 @@ class TestTelegram(unittest.TestCase):
         self.assertEqual("".join(partes), texto)
         for p in partes:
             self.assertLessEqual(semana.u16(p), 4096)
-        # o corte cai no início de uma seção quando a seção cabe inteira
+        # o corte cai no início de uma seçêo quando a seçêo cabe inteira
         self.assertTrue(all(p.startswith(tuple(f"{n}) " for n in range(1, 8))) for p in partes))
 
     def test_linha_gigante_e_cortada(self):
-        texto = "1) X\n" + ("ã" * 5000) + "🚀" * 10 + "\n"
+        texto = "1) X\n" + ("ê" * 5000) + "🚀" * 10 + "\n"
         partes = semana.dividir(texto, 4096)
         self.assertEqual("".join(partes), texto)
         self.assertTrue(all(semana.u16(p) <= 4096 for p in partes))
