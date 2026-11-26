@@ -83,7 +83,7 @@ class TestTabela(unittest.TestCase):
 
     def test_links(self):
         self.assertEqual(self.por["MovieFlow — filme de IA de graça"]["link"], "https://www.youtube.com/watch?v=0zyz-H-1qXQ")
-        self.assertEqual(self.por["claude-diretor — mascote INEMA animado"]["link"], "https://www.youtube.com/watch?v=dc1A1sZbREc")
+        self.assertEqual(self.por["claude-diretor — mascote ARCKHÉ animado"]["link"], "https://www.youtube.com/watch?v=dc1A1sZbREc")
         # "explicativo" tem 11 letras mas nêo é id do YouTube
         vc = next(x for t, x in self.por.items() if t.startswith("video-codigo"))
         self.assertEqual(vc["link"], "")

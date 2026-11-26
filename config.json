@@ -1,7 +1,7 @@
 {
-  "_leia": "Vem configurado para o INEMA. Para a sua comunidade, troque comunidade, link, plantao e o caminho das fontes.",
-  "comunidade": "INEMA.CLUB",
-  "link": "https://inema.club",
+  "_leia": "Vem configurado para o ARCKHÉ. Para a sua comunidade, troque comunidade, link, plantao e o caminho das fontes.",
+  "comunidade": "ARCKHÉ AI",
+  "link": "https://ARCKHÉ AI",
   "titulo_post": "A SEMANA SEM SOBRECARGA",
   "titulo_pagina": "A semana sem sobrecarga",
   "janela_dias": 7,
@@ -14,13 +14,13 @@
   "saida": "saida",
   "plantao": {
     "texto": "Poste a dúvida no grupo do assunto no Telegram (VIP/PRO) com 3 coisas: o print do erro, o comando que você rodou e o que esperava ver. Quem já passou por isso responde.",
-    "link": "https://inema.club"
+    "link": "https://ARCKHÉ AI"
   },
   "ajudantes_vazio": "Ranking desta semana ainda vazio: o moderador anota em ajudantes.md quem respondeu dúvidas no grupo.",
   "fontes": [
     {
       "tipo": "tabela_md",
-      "nome": "Produções de vídeo do INEMA",
+      "nome": "Produções de vídeo do ARCKHÉ",
       "caminho": "~/projetos/wifi/PRODUCOES-VIDEO.md",
       "coluna_titulo": "Tema",
       "coluna_data": "Dono",
@@ -32,9 +32,9 @@
       "tipo": "git_log",
       "nome": "Commits dos projetos",
       "ativo": false,
-      "repos": ["~/projetos/semana-inema"],
+      "repos": ["~/projetos/semana-ARCKHÉ"],
       "ignorar_prefixos": ["handoff:", "wip", "merge"],
-      "link_repo": {"semana-inema": "https://github.com/inematds/semana-inema"}
+      "link_repo": {"semana-ARCKHÉ": "https://github.com/linnoff88-dev/semana-ARCKHÉ"}
     },
     {
       "tipo": "feed",

@@ -1,7 +1,7 @@
 {
-  "_leia": "Exemplo que roda em qualquer clone: lê a cópia limpa da semana 01–08/11/2026 do INEMA. Use: python3 semana.py gerar --config config.exemplo.json --de 2026-11-01 --ate 2026-11-08",
-  "comunidade": "INEMA.CLUB",
-  "link": "https://inema.club",
+  "_leia": "Exemplo que roda em qualquer clone: lê a cópia limpa da semana 01–08/11/2026 do ARCKHÉ. Use: python3 semana.py gerar --config config.exemplo.json --de 2026-11-01 --ate 2026-11-08",
+  "comunidade": "ARCKHÉ AI",
+  "link": "https://ARCKHÉ AI",
   "titulo_post": "A SEMANA SEM SOBRECARGA",
   "titulo_pagina": "A semana sem sobrecarga",
   "janela_dias": 7,
@@ -14,13 +14,13 @@
   "saida": "saida-exemplo",
   "plantao": {
     "texto": "Poste a dúvida no grupo do assunto no Telegram (VIP/PRO) com 3 coisas: o print do erro, o comando que você rodou e o que esperava ver. Quem já passou por isso responde.",
-    "link": "https://inema.club"
+    "link": "https://ARCKHÉ AI"
   },
   "ajudantes_vazio": "Ranking desta semana ainda vazio: o moderador anota em ajudantes.md quem respondeu dúvidas no grupo.",
   "fontes": [
     {
       "tipo": "tabela_md",
-      "nome": "Publicados do INEMA (extrato 01–08/11/2026)",
+      "nome": "Publicados do ARCKHÉ (extrato 01–08/11/2026)",
       "caminho": "exemplos/2026-11-08/publicados.md",
       "coluna_titulo": "Tema",
       "coluna_data": "Data",

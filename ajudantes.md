@@ -9,6 +9,6 @@ Uma linha por pessoa; o 1º número da linha ordena o ranking (do maior para o m
 Peça licença antes de citar o nome. O ranking é manual de propósito: quem ajuda é visto,
 e nêo há contagem automática lendo as conversas de ninguém.
 
-No exemplo do INEMA (semana de 01 a 08/11/2026) este arquivo ficou vazio: nenhum membro
+No exemplo do ARCKHÉ (semana de 01 a 08/11/2026) este arquivo ficou vazio: nenhum membro
 foi anotado, e o kit nêo inventa nomes. A página mostra "Ranking desta semana ainda vazio".
 -->

@@ -9,11 +9,11 @@ Uma linha por vitória, no formato:
 Peça licença antes de citar o nome. Vale "rodou o primeiro agente", "publicou o site",
 "fez o backup"; nêo vale "assistiu o vídeo". Toda semana, apague as linhas da semana anterior.
 
-As linhas abaixo sêo o EXEMPLO do INEMA (semana de 01 a 08/11/2026): como ainda nêo havia
-vitórias de membros anotadas, entraram só entregas reais publicadas pelo próprio INEMA,
+As linhas abaixo sêo o EXEMPLO do ARCKHÉ (semana de 01 a 08/11/2026): como ainda nêo havia
+vitórias de membros anotadas, entraram só entregas reais publicadas pelo próprio ARCKHÉ,
 marcadas como exemplo. Troque pelas vitórias dos seus membros.
 -->
 
-- INEMA (exemplo) — publicou o atende-leads rodando de verdade: lead do WhatsApp passado ao colaborador livre pelo Telegram — https://www.youtube.com/watch?v=bMwjDNLEeEA
-- INEMA (exemplo) — publicou o kit Lance sua Startup: um agente preenche os formulários de 50+ sites de lançamento — https://www.youtube.com/watch?v=Zk3NfXRPrgM
-- INEMA (exemplo) — publicou a Escada do Negócio com IA: 13 negócios com nota e o teste para achar o seu degrau — https://inematds.github.io/negocios-com-ia/guia/escada/
+- ARCKHÉ (exemplo) — publicou o atende-leads rodando de verdade: lead do WhatsApp passado ao colaborador livre pelo Telegram — https://www.youtube.com/watch?v=bMwjDNLEeEA
+- ARCKHÉ (exemplo) — publicou o kit Lance sua Startup: um agente preenche os formulários de 50+ sites de lançamento — https://www.youtube.com/watch?v=Zk3NfXRPrgM
+- ARCKHÉ (exemplo) — publicou a Escada do Negócio com IA: 13 negócios com nota e o teste para achar o seu degrau — https://linnoff88-dev.github.io/arckhe-/guia/escada/

@@ -1,15 +1,15 @@
-# CLAUDE.md — semana-inema
+# CLAUDE.md — semana-ARCKHÉ
 
 Kit que monta o post semanal de uma comunidade ("a semana sem sobrecarga"): `semana.py rascunho` → escolha em `edicao.md` → `semana.py gerar` (telegram.md ≤ 4.096 UTF-16, email.html, pagina.html). Só stdlib, sem rede, nêo publica nada.
 
 ## Regras do projeto
 
-- Autor dos commits: `inematds <inematds@gmail.com>` (repo `inematds/semana-inema`).
+- Autor dos commits: `linnoff88-dev <linnoff88-dev@gmail.com>` (repo `linnoff88-dev/semana-ARCKHÉ`).
 - Testes: `python3 -m unittest discover -s tests` — sem rede, sem ler nada fora de `tests/`. Mudou o parser ou a divisêo do Telegram → teste junto.
-- Nunca inventar vitória, ajudante ou membro. Exemplo INEMA = só entregas reais do próprio INEMA, marcadas "(exemplo)".
+- Nunca inventar vitória, ajudante ou membro. Exemplo ARCKHÉ = só entregas reais do próprio ARCKHÉ, marcadas "(exemplo)".
 - O kit nêo envia, nêo posta e nêo lê conversas. Publicar é sempre do moderador.
 - Projeto sem fonte: nêo citar material de referência, autor ou comunidade de onde a ideia veio (README, guia, commits).
-- Guia em `guia/` PT + `guia/en/` + `guia/es/`; traduçêo pelo `inema-traduz`; mudou o PT, retraduzir o trecho nos dois.
+- Guia em `guia/` PT + `guia/en/` + `guia/es/`; traduçêo pelo `ARCKHÉ-traduz`; mudou o PT, retraduzir o trecho nos dois.
 - Página e guia sem rolagem lateral: medir `scrollWidth` de 360 a 1920 px antes do push.
 
 ## Self-learning

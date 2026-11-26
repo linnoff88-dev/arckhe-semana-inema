@@ -132,7 +132,7 @@ def ler_tabela_md(texto, fonte):
     Regras:
     - só vale a tabela que tem a coluna `coluna_titulo` no cabeçalho; linhas acima dele sêo ignoradas;
     - só entra linha cuja 1ª parte do estado (antes de " — ", ":" ou ";") tem a palavra de `so_com`
-      (INEMA: "publicad", que casa publicado/publicada; em inglês, use "published");
+      (ARCKHÉ: "publicad", que casa publicado/publicada; em inglês, use "published");
     - data = a data escrita depois dessa palavra (dd/mm ou dd/mm/aaaa); se nêo houver, a data da coluna_data;
       ano que falta vem da coluna_data; sem data nenhuma → contada como "sem data" e fica de fora.
     """
@@ -636,7 +636,7 @@ def html_pagina(ed, cfg, jan, chegou, vitorias, ajudantes):
         aj = f"<p class=\"vazio\">{e(cfg.get('ajudantes_vazio', 'Ranking desta semana ainda vazio: anote em ajudantes.md quem respondeu dúvidas no grupo.'))}</p>"
     S.append(f"""<section id="ajudou"><h2><span class="n">7</span>Quem mais ajudou</h2>{aj}</section>""")
     S.append(f"""<footer>{e(nome)} · {a(cfg.get('link', ''), cfg.get('link', '').replace('https://', ''))}<br>
-Feito com o kit semana-inema · gerado em {dt.date.today().strftime('%d/%m/%Y')}</footer></div></body></html>""")
+Feito com o kit semana-ARCKHÉ · gerado em {dt.date.today().strftime('%d/%m/%Y')}</footer></div></body></html>""")
     return "\n".join(S) + "\n"
 
 

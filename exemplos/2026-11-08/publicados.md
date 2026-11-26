@@ -1,6 +1,6 @@
-# Publicados — extrato da semana de 01 a 08/11/2026 (INEMA)
+# Publicados — extrato da semana de 01 a 08/11/2026 (ARCKHÉ)
 
-Cópia limpa das 26 publicações que o `semana.py` leu da tabela de produções do INEMA nessa semana.
+Cópia limpa das 26 publicações que o `semana.py` leu da tabela de produções do ARCKHÉ nessa semana.
 Serve para reproduzir o exemplo num clone (`--config config.exemplo.json`) e como modelo da SUA tabela:
 uma linha por publicaçêo; a coluna Estado começa com "publicado" e traz a data (dia/mês/ano) e o link.
 
@@ -14,7 +14,7 @@ uma linha por publicaçêo; a coluna Estado começa com "publicado" e traz a dat
 | atende-leads — agente de leads no WhatsApp que passa o lead ao colaborador livre pelo… | 05/11/2026 | publicado 05/11/2026 — https://www.youtube.com/watch?v=-6VKlGAYwKY |
 | Como se proteger de temporal e tornado | 06/11/2026 | publicado 06/11/2026 — https://www.youtube.com/watch?v=nFe_4YLRtME |
 | MovieFlow — filme de IA de graça | 06/11/2026 | publicado 06/11/2026 — https://www.youtube.com/watch?v=0zyz-H-1qXQ |
-| Nosso Fim de Semana no Refúgio INEMA | 06/11/2026 | publicado 06/11/2026 — https://www.youtube.com/watch?v=w1hCmmB0cUU |
+| Nosso Fim de Semana no Refúgio ARCKHÉ | 06/11/2026 | publicado 06/11/2026 — https://www.youtube.com/watch?v=w1hCmmB0cUU |
 | atende-leads 9:16 — mesma versêo do explicavideo de 05/11 | 06/11/2026 | publicado 06/11/2026 — https://youtube.com/shorts/fm2Ud_G5Y0U |
 | atende-leads demo real — novo vídeo com o avatar do Nei e as telas reais do atende-leads… | 06/11/2026 | publicado 06/11/2026 — https://www.youtube.com/watch?v=bMwjDNLEeEA |
 | reel-ciencia-3d — reels de ciência "E se…?" 9:16 feitos só com código | 06/11/2026 | publicado 06/11/2026 |
@@ -30,5 +30,5 @@ uma linha por publicaçêo; a coluna Estado começa com "publicado" e traz a dat
 | OpenAI Astra abre a caixa-preta da IA | 07/11/2026 | publicado 07/11/2026 — https://www.youtube.com/watch?v=l4FsxNn-lxA |
 | claude-diretor — aula com b-roll automático | 07/11/2026 | publicado 07/11/2026 — https://www.youtube.com/watch?v=_jJ_7P8EBVk |
 | claude-diretor — explicativo estilo quadro-negro | 07/11/2026 | publicado 07/11/2026 — https://www.youtube.com/watch?v=BZmecf8VxWI |
-| claude-diretor — mascote INEMA animado | 07/11/2026 | publicado 07/11/2026 — https://www.youtube.com/watch?v=dc1A1sZbREc |
+| claude-diretor — mascote ARCKHÉ animado | 07/11/2026 | publicado 07/11/2026 — https://www.youtube.com/watch?v=dc1A1sZbREc |
 | Árvore genealógica com IA | 07/11/2026 | publicado 07/11/2026 — https://www.youtube.com/watch?v=v5cNF_fnABk |

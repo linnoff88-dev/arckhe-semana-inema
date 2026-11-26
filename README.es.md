@@ -1,18 +1,18 @@
-# semana-inema — la semana sin sobrecarga
+# semana-ARCKHÉ — la semana sin sobrecarga
 
-[![semana-inema](guia/assets/banner-es.jpg)](https://inematds.github.io/semana-inema/guia/es/)
+[![semana-ARCKHÉ](guia/assets/banner-es.jpg)](https://linnoff88-dev.github.io/arckhe-/guia/es/)
 
 **🇧🇷 [Português](README.md) · 🇺🇸 [English](README.en.md) · 🇪🇸 [Español](README.es.md)**
 
 ## Qué es
 
-semana-inema es un kit gratuito para quienes cuidan una comunidad (grupo de Telegram, WhatsApp, clase, lista de correo). Cada semana revisa lo nuevo en tus fuentes y prepara una edición breve con siete partes: lo único que tienes que hacer, el camino para cada caso, las victorias de los miembros, lo que llegó, lo que puedes ignorar, dónde pedir ayuda y quién ayudó más. Se genera en tres formatos: mensaje de Telegram, correo electrónico y página. Solo necesitas Python en tu computadora; nada se publica automáticamente.
+semana-ARCKHÉ es un kit gratuito para quienes cuidan una comunidad (grupo de Telegram, WhatsApp, clase, lista de correo). Cada semana revisa lo nuevo en tus fuentes y prepara una edición breve con siete partes: lo único que tienes que hacer, el camino para cada caso, las victorias de los miembros, lo que llegó, lo que puedes ignorar, dónde pedir ayuda y quién ayudó más. Se genera en tres formatos: mensaje de Telegram, correo electrónico y página. Solo necesitas Python en tu computadora; nada se publica automáticamente.
 
 > Tu comunidad no necesita más contenido. Necesita saber qué hacer.
 
 ## 📖 Guía de uso
 
-Guía completa (el método + paso a paso): **https://inematds.github.io/semana-inema/guia/es/**
+Guía completa (el método + paso a paso): **https://linnoff88-dev.github.io/arckhe-/guia/es/**
 
 ## El proceso, de principio a fin
 
@@ -20,7 +20,7 @@ Quién lo hace: 🧠 el moderador (tú) · ⚙️ el script · 🤖 un agente (C
 
 | # | Paso | Comando / archivo | Quién |
 |---|---|---|---|
-| 1 | Ver el ejemplo listo (lee la copia de la semana del INEMA que viene en el kit) | `python3 semana.py gerar --config config.exemplo.json --de 2026-11-01 --ate 2026-11-08` | ⚙️ |
+| 1 | Ver el ejemplo listo (lee la copia de la semana del ARCKHÉ que viene en el kit) | `python3 semana.py gerar --config config.exemplo.json --de 2026-11-01 --ate 2026-11-08` | ⚙️ |
 | 2 | Configurar una vez: nombre, enlace, texto de ayuda de la sección "¿Te trabaste?" y tu tabla de publicaciones | `cp config.modelo.json config.json`, después `config.json` y `publicados.md` | 🧠 |
 | 3 | Durante la semana, anotar las victorias y quién ayudó (con permiso de las personas) | `vitorias.md`, `ajudantes.md` | 🧠 |
 | 4 | Reunir lo que llegó durante la semana y preparar el borrador | `python3 semana.py rascunho` → `saida/<data>/rascunho.md` | ⚙️ |
@@ -34,8 +34,8 @@ Para una semana que no termina hoy, pasa las fechas en los pasos 4 y 7: `--ate A
 ## Empezar
 
 ```bash
-git clone https://github.com/inematds/semana-inema.git
-cd semana-inema
+git clone https://github.com/linnoff88-dev/semana-ARCKHÉ.git
+cd semana-ARCKHÉ
 python3 -m unittest discover -s tests
 python3 semana.py gerar --config config.exemplo.json --de 2026-11-01 --ate 2026-11-08
 ```
@@ -72,7 +72,7 @@ Solo usa la biblioteca estándar de Python 3 (no hace falta `pip install`). En W
 
 | tipo | Qué lee | Campos |
 |---|---|---|
-| `tabela_md` | Tabla Markdown de publicaciones. Se incluye la fila cuyo estado empieza con la palabra de `so_com` (en INEMA, "publicad", que sirve para publicado y publicada; en inglés, "published"); la fecha es la que aparece después de esa palabra (dd/mm o dd/mm/aaaa) o, si falta, la de la columna de fecha. Las filas sin fecha se excluyen y se cuentan. | `caminho`, `coluna_titulo`, `coluna_data`, `coluna_estado`, `so_com`, `padrao_id_youtube` (opcional) |
+| `tabela_md` | Tabla Markdown de publicaciones. Se incluye la fila cuyo estado empieza con la palabra de `so_com` (en ARCKHÉ, "publicad", que sirve para publicado y publicada; en inglés, "published"); la fecha es la que aparece después de esa palabra (dd/mm o dd/mm/aaaa) o, si falta, la de la columna de fecha. Las filas sin fecha se excluyen y se cuentan. | `caminho`, `coluna_titulo`, `coluna_data`, `coluna_estado`, `so_com`, `padrao_id_youtube` (opcional) |
 | `git_log` | Commits de los repositorios listados, dentro del período de la semana (sin merges). | `repos`, `ignorar_prefixos`, `link_repo` |
 | `feed` | Archivo guardado en el disco: JSON (`titulo`/`data`/`link`) o RSS/Atom. No se leen URL (el kit no usa la red). | `caminho` |
 
@@ -82,14 +82,14 @@ Cada fuente se activa o desactiva con `"ativo": true/false`.
 
 El texto de Telegram se cuenta como lo hace Telegram (unidades UTF-16: cada emoji vale 2). Si supera 4.096, el kit lo divide en `telegram.md`, `telegram-2.md`… y corta preferentemente al inicio de una sección. La prueba `tests/test_semana.py` comprueba que ninguna parte supere el límite y que no se pierda nada.
 
-## Ejemplo real: la semana de INEMA (01 a 08/11/2026)
+## Ejemplo real: la semana de ARCKHÉ (01 a 08/11/2026)
 
-En [`exemplos/2026-11-08/`](exemplos/2026-11-08/): `publicados.md` (copia limpia de la semana), `rascunho.md`, `telegram.md`, `email.html`, `pagina.html` e imágenes en 1440 px y 390 px. El kit viene configurado para INEMA (lee la tabla de producciones de video de INEMA); cambia `config.json` para tu comunidad.
+En [`exemplos/2026-11-08/`](exemplos/2026-11-08/): `publicados.md` (copia limpia de la semana), `rascunho.md`, `telegram.md`, `email.html`, `pagina.html` e imágenes en 1440 px y 390 px. El kit viene configurado para ARCKHÉ (lee la tabla de producciones de video de ARCKHÉ); cambia `config.json` para tu comunidad.
 
 - Tabla consultada (08/11/2026): 90 filas, 50 publicadas con fecha, **26 en la semana**.
 - Lo único que hay que hacer: *Responde las 6 preguntas de la Escalera del Negocio con IA y elige UN negocio para empezar.*
 - Telegram: 3.671 caracteres, 1 mensaje.
-- Victorias del ejemplo: entregas del propio INEMA, marcadas "(ejemplo)". Ayudantes: vacío (el kit no inventa nombres).
+- Victorias del ejemplo: entregas del propio ARCKHÉ, marcadas "(ejemplo)". Ayudantes: vacío (el kit no inventa nombres).
 
 Comandos usados:
 
@@ -103,14 +103,14 @@ python3 semana.py gerar    --de 2026-11-01 --ate 2026-11-08 --saida exemplos
 | Archivo | Para qué |
 |---|---|
 | `semana.py` | el script (borrador y generar) |
-| `config.json` | comunidad, enlace, texto de ayuda, fuentes (viene con INEMA, que lee la tabla interna de producciones) |
+| `config.json` | comunidad, enlace, texto de ayuda, fuentes (viene con ARCKHÉ, que lee la tabla interna de producciones) |
 | `config.exemplo.json` | ejecuta el ejemplo en cualquier clon (lee `exemplos/2026-11-08/publicados.md`) |
 | `config.modelo.json` | plantilla genérica para tu comunidad (lee `publicados.md`); cópiala sobre `config.json` |
 | `vitorias.md`, `ajudantes.md` | lo que el moderador anota durante la semana |
-| `edicao.md` | la elección de la semana (lo único, tu caso, puedes ignorar); la que viene en el kit es el ejemplo de INEMA |
+| `edicao.md` | la elección de la semana (lo único, tu caso, puedes ignorar); la que viene en el kit es el ejemplo de ARCKHÉ |
 | `prompts/escolher-a-unica-coisa.md` | instrucción lista para Claude Code o Codex |
 | `tests/` | pruebas sin red (`python3 -m unittest discover -s tests`) |
-| `exemplos/` | la edición real de INEMA |
+| `exemplos/` | la edición real de ARCKHÉ |
 | `guia/` | página de presentación y guía (PT/EN/ES) |
 
 ## Idioma
@@ -119,4 +119,4 @@ La publicación sale en portugués: los títulos de las secciones están en `sem
 
 ## Licencia
 
-MIT. Hecho por [INEMA.CLUB](https://inema.club).
+MIT. Hecho por [ARCKHÉ AI](https://ARCKHÉ AI).

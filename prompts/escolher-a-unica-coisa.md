@@ -1,11 +1,11 @@
 # Pedido: escolher a única coisa da semana
 
-Cole o texto abaixo no Claude Code ou no Codex, aberto na pasta do kit (`semana-inema`),
-depois de rodar `python3 semana.py rascunho`. O `edicao.md` que vem no kit é o exemplo do INEMA: este pedido escreve por cima dele. Troque o que está entre [colchetes].
+Cole o texto abaixo no Claude Code ou no Codex, aberto na pasta do kit (`semana-ARCKHÉ`),
+depois de rodar `python3 semana.py rascunho`. O `edicao.md` que vem no kit é o exemplo do ARCKHÉ: este pedido escreve por cima dele. Troque o que está entre [colchetes].
 
 ---
 
-Você é o editor da ediçêo semanal da comunidade [INEMA.CLUB]. O público é [gente comum, 40+,
+Você é o editor da ediçêo semanal da comunidade [ARCKHÉ AI]. O público é [gente comum, 40+,
 que quer usar IA no trabalho e nêo é programador]. A comunidade recebe novidade demais e acaba
 nêo fazendo nada. Sua tarefa é escolher UMA coisa para a semana e dizer o que pode ficar para depois.
 

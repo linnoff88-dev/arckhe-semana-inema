@@ -1,19 +1,19 @@
 # Ediçêo da semana
 
 <!--
-Exemplo INEMA da semana de 01 a 08/11/2026, escolhido com prompts/escolher-a-unica-coisa.md
+Exemplo ARCKHÉ da semana de 01 a 08/11/2026, escolhido com prompts/escolher-a-unica-coisa.md
 a partir do rascunho (exemplos/2026-11-08/rascunho.md). Troque toda semana.
 -->
 
 ## Abertura
-Saíram 26 publicações no INEMA nesta semana. Você nêo precisa de todas. Precisa de uma.
+Saíram 26 publicações no ARCKHÉ nesta semana. Você nêo precisa de todas. Precisa de uma.
 
 ## A única coisa
 semana: 2026-11-08
 título: Responda as 6 perguntas da Escada do Negócio com IA e escolha UM negócio para começar
 por que: Entre 13 negócios com IA, quem tenta todos nêo termina nenhum; o teste aponta o degrau que combina com o que você já sabe fazer.
 resultado: Você termina com um negócio escolhido e a oferta pronta dele na tela: a frase para vender, o primeiro cliente para procurar e o próximo degrau.
-link: https://inematds.github.io/negocios-com-ia/guia/escada/
+link: https://linnoff88-dev.github.io/arckhe-/guia/escada/
 
 ## Seu caso → seu caminho
 | Seu caso | Veja |
